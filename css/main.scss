@@ -167,15 +167,34 @@ h1,h2,h3,h4,h5,h6 {
                 margin-top: 1em;
             }
         }
+        
+        .overlay{
 
+            &:before{
+                position: absolute;
+                content:" ";
+                top:0;
+                left:0;
+                width:100%;
+                height:100%;
+                display: block;
+                z-index:0;
+                background-color: rgba(0, 0, 0, 0.3);
+            }
+          }
 
         .rigthContent {
             background:$black;
+            position: relative;
             width: 40%;
+            background-color: $black;
+            background-size: cover;
 
             #settingsDiv {
+                position: absolute;
                 background: $black;
                 padding: 2em;
+                height: calc(100vh - 4em - 9px);
 
                 h2{
                     color: #fff;
